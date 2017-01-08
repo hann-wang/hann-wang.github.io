@@ -1,12 +1,12 @@
 ---
 layout:     post
-title:      "Welcome to Hux Blog"
-subtitle:   " \"Hello World, Hello Blog\""
-date:       2015-01-29 12:00:00
-author:     "Hux"
+title:      "Welcome Hann's Blog"
+subtitle:   "Hello World!"
+date:       2017-01-08
+author:     "Hann"
 header-img: "img/post-bg-2015.jpg"
 tags:
-    - 生活
+    - Life
 ---
 
 > “Yeah It's on. ”
@@ -14,18 +14,16 @@ tags:
 
 ## 前言
 
-Hux 的 Blog 就这么开通了。
+Hann's Blog 就这么开通了。
 
 [跳过废话，直接看技术实现 ](#build)
 
+2016年暑假开始，我来到了Ninebot & Segway Robotics实习，通过推研面试后又进入了THU CV-AI LAB，就这样我顺利跳进了计算机视觉的大坑。
 
 
-2015 年，Hux 总算有个地方可以好好写点东西了。
+身边的大牛总喜欢写写文章教导一下小学弟(xiao xue mei)，作为一个程序猿， 我也尝试在CSDN上写写博客，然而发现CSDN的公式渲染实在太渣，模板也难看得一逼，索性像泽贤一样把博客挂在github上好了。
 
-
-作为一个程序员， Blog 这种轮子要是挂在大众博客程序上就太没意思了。一是觉得大部分 Blog 服务都太丑，二是觉得不能随便定制不好玩。之前因为太懒没有折腾，结果就一直连个写 Blog 的地儿都没有。
-
-在玩了一段时间知乎之后，答题的快感又激起了我开博客的冲动。之前的[个人网站](http://huangxuan.me/portfolio)是作品集形式的（现在集成进来了），并不适合用来写博文，一不做二不休，花一天搞一个吧！
+当我注册好域名hann.wang才发现，原来github pages的自定义域名是没法弄证书的，这是信仰HTTPS Everythere的我不能忍的啊。后来在github-tools/github的issues中发现有人提到了Netlify，试一试果然很NB，于是博客的事就这么定下来了。
 
 
 <p id = "build"></p>
