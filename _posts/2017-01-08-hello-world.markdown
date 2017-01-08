@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "Welcome Hann's Blog"
+title:      "Welcome to Hann's Blog"
 subtitle:   "Hello World!"
 date:       2017-01-08
 author:     "Hann"
@@ -9,7 +9,7 @@ tags:
     - Life
 ---
 
-> “Yeah It's on. ”
+> “Yeah, It's on. ”
 
 
 ## 前言
@@ -21,9 +21,9 @@ Hann's Blog 就这么开通了。
 2016年暑假开始，我来到了Ninebot & Segway Robotics实习，通过推研面试后又进入了THU CV-AI LAB，就这样我顺利跳进了计算机视觉的大坑。
 
 
-身边的大牛总喜欢写写文章教导一下小学弟(xiao xue mei)，作为一个程序猿， 我也尝试在CSDN上写写博客，然而发现CSDN的公式渲染实在太渣，模板也难看得一逼，索性像泽贤一样把博客挂在github上好了。
+身边的大牛总喜欢写写文章教导一下小学弟(xiao xue mei)，作为一个程序猿， 我也尝试在CSDN上写写博客，然而发现CSDN的公式渲染实在太渣，模板也难看得一逼，索性像泽贤一样把博客挂在Github上好了。
 
-当我注册好域名hann.wang才发现，原来github pages的自定义域名是没法弄证书的，这是信仰HTTPS Everythere的我不能忍的啊。后来在github-tools/github的issues中发现有人提到了Netlify，试一试果然很NB，于是博客的事就这么定下来了。
+当我注册好域名hann.wang才发现，原来Github Pages的自定义域名是没法弄证书的，这是信仰HTTPS Everythere的我不能忍的啊。后来在github-tools/github的issues中发现有人提到了Netlify，试一试果然很NB，于是博客的事就这么定下来了。
 
 
 <p id = "build"></p>
@@ -31,47 +31,30 @@ Hann's Blog 就这么开通了。
 
 ## 正文
 
-接下来说说搭建这个博客的技术细节。  
+简单说说搭建这个博客的过程。  
 
-正好之前就有关注过 [GitHub Pages](https://pages.github.com/) + [Jekyll](http://jekyllrb.com/) 快速 Building Blog 的技术方案，非常轻松时尚。
+Google一下（就不用某度）应该能找到很多 [GitHub Pages](https://pages.github.com/) + [Jekyll](http://jekyllrb.com/) 快速搭建Blog的技术方案，不过更简单的配置方法是——fork别人的Blog (^_^)，然后开始写Markdown就可以了~
 
-其优点非常明显：
+Jekyll的本地调试需要用到ruby，先安装ruby，然后使用TUNA提供的[RubyGem源](https://mirrors.tuna.tsinghua.edu.cn/rubygems/)安装bundler，在仓库根目录下执行bundle install即可（前提是配置好Gemfile哈）。
 
-* **Markdown** 带来的优雅写作体验
-* 非常熟悉的 Git workflow ，**Git Commit 即 Blog Post**
-* 利用 GitHub Pages 的域名和免费无限空间，不用自己折腾主机
-	* 如果需要自定义域名，也只需要简单改改 DNS 加个 CNAME 就好了
-* Jekyll 的自定制非常容易，基本就是个模版引擎
+编译网站：
+```
+bundle exec jekyll build
+```
 
+运行网站：
+```
+bundle exec jekyll serve --no-watch
+```
 
-本来觉得最大的缺点可能是 GitHub 在国内访问起来太慢，所以第二天一起床就到 GitCafe(Chinese GitHub Copy) 迁移了一个[镜像](http://huxpro.gitcafe.io)出来，结果还是巨慢。
+在Github上部署个人主页时，需要建立一个名称为`username.github.io`的仓库，然后将网站部署到master分支中。如果需要绑定自定义域名，可以在仓库根目录中建立`CNAME`文件，填写域名地址。不过自定义域名使用https访问时会提示证书错误，目前Github无法给自定义域名设置SSL证书。
 
-哥哥可是个前端好嘛！ 果断开 Chrome DevTool 查了下网络请求，原来是 **pending 在了 Google Fonts** 上，页面渲染一直被阻塞到请求超时为止，难怪这么慢。  
-忍痛割爱，只好把 Web Fonts 去了（反正超时看到的也只能是 fallback ），果然一下就正常了，而且 GitHub 和 GitCafe 对比并没有感受到明显的速度差异，虽然 github 的 ping 值明显要高一些，达到了 300ms，于是用 DNSPOD 优化了一下速度。
-
-
-
----
-
-配置的过程中也没遇到什么坑，基本就是 Git 的流程，相当顺手
-
-大的 Jekyll 主题上直接 fork 了 Clean Blog（这个主题也相当有名，就不多赘述了。唯一的缺点大概就是没有标签支持，于是我给它补上了。）
-
-本地调试环境需要 `gem install jekyll`，结果 rubygem 的源居然被墙了……后来手动改成了我大淘宝的镜像源才成功
-
-Theme 的 CSS 是基于 Bootstrap 定制的，看得不爽的地方直接在 Less 里改就好了（平时更习惯 SCSS 些），**不过其实我一直觉得 Bootstrap 在移动端的体验做得相当一般，比我在淘宝参与的团队 CSS 框架差多了……**所以为了体验，也补了不少 CSS 进去
-
-最后就进入了耗时反而最长的**做图、写字**阶段，也算是进入了**写博客**的正轨，因为是类似 Hack Day 的方式去搭这个站的，所以折腾折腾着大半夜就过去了。
-
-第二天考虑中文字体的渲染，fork 了 [Type is Beautiful](http://www.typeisbeautiful.com/) 的 `font` CSS，调整了字号，适配了 Win 的渣渲染，中英文混排效果好多了。
+[Netlify](https://www.netlify.com)提供了绝佳的解决方案，从Github仓库自动部署，可以免费为自定义域名设置Let's Encrypt提供的SSL证书。使用Github登陆并选择自己的博客仓库就可以了，以后每次push操作都会自动触发Netlify重新编译部署。
 
 
 ## 后记
 
-回顾这个博客的诞生，纯粹是出于个人兴趣。在知乎相关问题上回答并获得一定的 star 后，我决定把这个博客主题当作一个小小的开源项目来维护。
+由于毕设和实习工作繁忙，不知道自己能否有足够的精力维护好这个博客。不过我还是很希望能时常做点总结，未来的某一天回头看看自己走过的路，或许还是一件很有意思的事。
 
-在经历 v1.0 - v1.5 的蜕变后，这个博客主题愈发完整，不但增加了诸多 UI 层的优化（opinionated）；在代码层面，更加丰富的配置项也使得这个主题拥有了更好的灵活性与可拓展性。而作为一个开源项目，我也积极的为其完善文档与解决 issue。
 
-如果你恰好逛到了这里，希望你也能喜欢这个博客主题。
-
-—— Hux 后记于 2015.10
+—— Hann @ Jan. 8, 2016.

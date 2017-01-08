@@ -64,18 +64,18 @@ featured-condition-size: 1              # A tag will be featured if the size of 
 friends: [
     {
         title: "Hann's Blog",
-        href: "http://hann.wang"
+        href: "https://www.hann.wang"
     },{
-        title: "Foo",
+        title: "Huanglu's Homepage",
+        href: "http://huanglu.me"
+    },{
+        title: "Your Position...",
         href: "#"
     },{
-        title: "Bar",
+        title: "Your Position...",
         href: "#"
     },{
-        title: "Example Friends",
-        href: "#"
-    },{
-        title: "It helps SEO",
+        title: "Your Position...",
         href: "#"
     }
 ]
