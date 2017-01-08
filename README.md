@@ -1,9 +1,10 @@
-# HuxBlog Boilerplate
+# Hann's Blog
 
-##### This is the boilerplate of [Hux Blog](https://github.com/Huxpro/huxpro.github.io), all documents is over there!
+###[View Live Hann's Blog &rarr;](https://www.hann.wang)
 
-#### [View Boilerplate &rarr;](http://huangxuan.me/huxblog-boilerplate/)
+## License
 
-#### [View Live Hux Blog &rarr;](http://huangxuan.me)
+Apache License 2.0.
+Copyright (c) 2017 Hann
 
-## If you like Hux Blog, Please star [huxpro.github.io repo](https://github.com/Huxpro/huxpro.github.io) instead of this! Thank you!
+Hann's Blog is derived from [Hux Blog (Apache License 2.0)](https://github.com/Huxpro/huxpro.github.io)

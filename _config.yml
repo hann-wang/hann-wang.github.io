@@ -14,7 +14,7 @@ baseurl: ""         # for example, '/blog' if your blog hosted on 'host/blog'
 RSS: false
 #weibo_username:    hann-wang
 #zhihu_username:    hann-wang
-github_username:    hann-wang
+#github_username:    hann-wang
 #twitter_username:  hann-wang
 #facebook_username: hann-wang
 
@@ -68,8 +68,8 @@ kramdown:
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "写写代码，做做设计，看看产品。世界那么大，多玩玩看看。"
-sidebar-avatar: /img/avatar-hux.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-about-description: "THU电子狗一只，实习，毕设，阅读，旅行，永远在路上。"
+sidebar-avatar: /img/avatar-wh.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 
